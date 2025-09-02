@@ -19,7 +19,7 @@ estudiantes = [
     {"nombre": "Amanda", "notas": [2.5, 3.5, 4.0]},
     {"nombre": "Ignacio", "notas": [6.5, 6.0, 5.8]},
     {"nombre": "Trinidad", "notas": [4.5, 4.2, 3.8]},
-    {"nombre": "Catalina", "notas": [7.0, 6.8, 6.5]},
+    {"nombre": "Catalina", "notas": [7.0, 6.8, 6.0]},
     {"nombre": "Joaquín", "notas": [3.5, 4.0, 4.8]},
     {"nombre": "Renata", "notas": [5.9, 5.5, 6.2]},
     {"nombre": "Cristóbal", "notas": [2.8, 3.2, 3.9]},
@@ -31,50 +31,3 @@ estudiantes = [
     {"nombre": "Constanza", "notas": [3.2, 4.0, 3.9]}
 ]
 
-#variables
-max_nota = 0
-min_nota = 0
-aprobados = 0
-nota_baja = 0
-todas_las_notas = []
-
-from statistics import mode
-
-for nota in estudiantes:
-
-    todas_las_notas.extend(nota["notas"])
-    
-    promedio = sum(nota["notas"]) / len(nota["notas"])
-
-    #sacando el promedio max y min de todos los estudiantes
-    if promedio > max_nota:
-        max_nota = promedio
-    if min_nota == 0 or promedio < min_nota:
-        min_nota = promedio
-
-    #sacando Aprobados (todas las notas >= 4.0)
-    if all(n >= 4.0 for n in nota["notas"]):
-        aprobados += 1
-    #sacando a estudiantes con almenos una nota menor a 4.0
-    if any(q < 4.0 for q in nota["notas"]):
-        nota_baja += 1
-
-    #sacando la moda
-    moda = mode(todas_las_notas)
-
-    #pasando a porcentaje la cantidad
-    porcentaje = (nota_baja / len(estudiantes)) * 100
-
-    #usar sorted para ordenar (usado x[1] para ordenar por el segundo elemento)
-    sorted_estudiantes = sorted(
-    [(mayor["nombre"], round(sum(mayor["notas"]) / len(mayor["notas"]), 1)) for mayor in estudiantes],
-    key=lambda x: x[1],
-    reverse=True
-    )
-
-print("Promedio máximo:", round(max_nota, 1))
-print("Promedio mínimo:", round(min_nota, 1))
-print("Moda de todas las notas:", round(moda, 1))
-print("Aprobados:", aprobados)
-print("Porcentaje de estudiantes con al menos una nota baja:", round(porcentaje, 1), "%")
-print("Listado de estudiantes con su promedio (mayor a menor):", sorted_estudiantes)
