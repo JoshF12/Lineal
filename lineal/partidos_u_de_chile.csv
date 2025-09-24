@@ -1,0 +1,21 @@
+﻿partido,rival,goles_u,goles_rival,posesion,remates,tiros_arco,corners,faltas
+1,Colo Colo,2,0,55,15,4,8,17
+2,La Serena,2,2,47,16,4,3,15
+3,Palestino,1,1,45,11,4,7,16
+4,Cobresal,2,0,54,14,7,8,10
+5,Audax Italiano,2,1,47,15,6,8,12
+6,Coquimbo Unido,1,1,58,9,4,2,17
+7,Huachipato,2,0,59,14,6,5,15
+8,O'Higgins,2,0,46,16,5,7,17
+9,Ñublense,1,1,62,9,6,3,17
+10,Cobreloa,2,1,60,17,7,7,14
+11,Unión Española,2,1,60,15,5,8,12
+12,Everton,2,1,57,11,4,8,8
+13,Magallanes,2,0,45,14,7,8,10
+14,Curicó Unido,3,1,45,16,5,3,14
+15,Universidad Católica,2,1,53,14,5,2,14
+16,Deportes Iquique,0,0,47,8,5,7,10
+17,Santiago Wanderers,1,0,58,10,3,6,17
+18,Melipilla,1,0,53,14,5,3,17
+19,Antofagasta,0,0,51,5,5,6,11
+20,San Luis,1,1,57,14,5,6,11
